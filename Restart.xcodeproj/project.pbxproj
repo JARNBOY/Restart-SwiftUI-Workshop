@@ -16,6 +16,7 @@
 		FB894FCA2A402EC200F4AC34 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB894FC92A402EC200F4AC34 /* OnboardingView.swift */; };
 		FB894FCC2A402ECE00F4AC34 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB894FCB2A402ECE00F4AC34 /* HomeView.swift */; };
 		FB894FD02A40379A00F4AC34 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB894FCF2A40379A00F4AC34 /* Image.swift */; };
+		FBF030392A4149DB00CD4874 /* CircleGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF030382A4149DB00CD4874 /* CircleGroupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FB894FC92A402EC200F4AC34 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		FB894FCB2A402ECE00F4AC34 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FB894FCF2A40379A00F4AC34 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		FBF030382A4149DB00CD4874 /* CircleGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleGroupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				FB894FC72A402E1D00F4AC34 /* Info.plist */,
 				FB2260612A400D130020AC57 /* RestartApp.swift */,
 				FB894FC22A402BAA00F4AC34 /* Sounds */,
+				FBF030372A4149C800CD4874 /* Views */,
 				FB894FC82A402E8C00F4AC34 /* Screens */,
 				FB894FCD2A40375900F4AC34 /* Utilities */,
 				FB2260652A400D150020AC57 /* Assets.xcassets */,
@@ -114,6 +117,14 @@
 				FB894FCF2A40379A00F4AC34 /* Image.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		FBF030372A4149C800CD4874 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FBF030382A4149DB00CD4874 /* CircleGroupView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +203,7 @@
 				FB894FCC2A402ECE00F4AC34 /* HomeView.swift in Sources */,
 				FB2260642A400D130020AC57 /* ContentView.swift in Sources */,
 				FB2260622A400D130020AC57 /* RestartApp.swift in Sources */,
+				FBF030392A4149DB00CD4874 /* CircleGroupView.swift in Sources */,
 				FB894FD02A40379A00F4AC34 /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

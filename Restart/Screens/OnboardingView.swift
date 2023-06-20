@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    //MARK: PROPERTY
     @AppStorage("Onboarding") var isOnboardingViewActive: Bool = true
     
+    @State private var buttonWidth: Double = UIScreen.main.bounds.width - 80
+    @State private var buttonOffset: CGFloat = 0
+    
+    //MARK: BODY
     var body: some View {
         ZStack {
             Color("ColorBlue")
@@ -66,7 +71,7 @@ struct OnboardingView: View {
                     HStack {
                         Capsule()
                             .fill(Color("ColorRed"))
-                            .frame(width: 80)
+                            .frame(width: buttonOffset + 80)
                         
                         Spacer()
                     }
@@ -84,16 +89,33 @@ struct OnboardingView: View {
                         }
                         .foregroundColor(.white)
                         .frame(width: 80,height: 80,alignment: .center)
-                        .onTapGesture {
-                            isOnboardingViewActive = false
-                        }
+                        .offset(x: buttonOffset)
+                        .gesture(
+                            DragGesture()
+                                .onChanged({ gesture in
+                                    //handle swipe left to right only
+                                    if gesture.translation.width > 0 &&  gesture.translation.width < (buttonWidth - 80) {
+                                        buttonOffset = gesture.translation.width
+                                    }
+                                    
+                                })
+                                .onEnded({ _ in
+                                    
+                                    if buttonOffset > (buttonWidth / 2) {
+                                        buttonOffset = (buttonWidth - 80)
+                                        isOnboardingViewActive = false
+                                    }
+                                    buttonOffset = 0
+                                    
+                                })
+                        )//: GESTURE
                         
                         Spacer()
                     }//: HStack
                     
                     
                 } //: FOOTER
-                .frame(height: 80, alignment: .center)
+                .frame(width: buttonWidth,height: 80, alignment: .center)
                 .padding()
             }
         }
